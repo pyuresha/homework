@@ -4,7 +4,7 @@ public class Rock {
     private int maxStep;
     private int maxDiff;
     private int route_length;
-    private int[] route = null;
+    private int[] route;
 
     public int getMaxStep() {
         return maxStep;
@@ -32,8 +32,14 @@ public class Rock {
             throw new IllegalArgumentException("invalid type");
         }
 
-        int max = -1;
-        int min = maxStep + 1;
+        if(maxDiff > maxStep) {
+            maxStep = maxDiff;
+        }
+
+        route = new int[route_length];
+        route[0] = (int) (Math.random()*maxStep);
+        int max = route[0];
+        int min = route[0];
         int diff = 0;
 
         for (int i = 0; i < route_length; i++) {
@@ -41,5 +47,9 @@ public class Rock {
         }
 
         route = null;
-    }
+    };
+
+
 }
+
+
