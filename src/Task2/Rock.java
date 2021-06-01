@@ -23,14 +23,19 @@ public class Rock {
 
 
     public Rock(int maxStep, int maxDiff, int route_length){
-        this.maxStep = maxStep;
-        this.maxDiff = maxDiff;
-        this.route_length = route_length;
+
+        if (route_length > 3 && maxStep > 1 && maxDiff > 0) {
+            this.maxStep = maxStep;
+            this.maxDiff = maxDiff;
+            this.route_length = route_length;
+        } else {
+            throw new IllegalArgumentException("invalid type");
+        }
 
         int max = -1;
         int min = maxStep + 1;
         int diff = 0;
-        
+
         for (int i = 0; i < route_length; i++) {
 
         }
