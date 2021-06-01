@@ -3,12 +3,20 @@ package Task2;
 public class Point {
     private int maxStep;
     private int maxDiff;
+    private static int maxValue = 1;
 
+    public static int getMaxValue() {
+        return maxValue;
+    }
 
-    public int getPoint(int element1,int element2) {
+    public int getPoint(int element1, int element2) {
 
 
         int max = Math.max(element1,element2);
+        if (max > maxValue) {
+            maxValue = max;
+        }
+
         int min = (element1+element2) - max;
 
         int diff = max - min;

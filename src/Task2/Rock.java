@@ -53,10 +53,24 @@ public class Rock {
             string += route[i] + " ";
 
         }
-
-        route = null;
     };
 
+    public void PrintGraph()
+    {
+        graph = new String[maxStep];
+        for (int i = 0; i < Point.getMaxValue();i++){
+            graph[i] = " ";
+            for (int j = 0; j < route_length; j++) {
+                if (route[j] > 0) {
+                    graph[i] += "*";
+                    route[j] -= 1;
+                } else graph[i] += " ";
+            }
+        }
+        for (int i = Point.getMaxValue()-1; i >=0; i--){
+            System.out.println(graph[i]);
+        }
+    }
 
 }
 
