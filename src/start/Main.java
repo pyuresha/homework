@@ -5,12 +5,14 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
-    Scanner in = new Scanner(System.in);
+    public static void main(String[] args) {
 
-    int n = in.nextInt();
+        Scanner in = new Scanner(System.in);
 
-    Random card = new Random();
+        int n = in.nextInt();
+
+        Random card = new Random();
 
 
-
+    }
 }
