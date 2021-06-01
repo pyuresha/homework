@@ -37,10 +37,7 @@ public class Rock {
         }
 
         route = new int[route_length];
-        route[0] = (int) (Math.random()*maxStep);
-        int max = route[0];
-        int min = route[0];
-        int diff = 0;
+
 
         for (int i = 0; i < route_length; i++) {
 
