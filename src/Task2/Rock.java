@@ -33,14 +33,19 @@ public class Rock {
         }
 
         if(maxDiff > maxStep) {
-            maxStep = maxDiff;
+            maxDiff = maxStep;
         }
 
         route = new int[route_length];
+        Point point = new Point(maxStep,maxDiff);
 
+        System.out.println(route[0]);
+        route[0] = point.getPoint();
 
-        for (int i = 0; i < route_length; i++) {
-
+        for (int i = 1; i < route_length; i++) {
+            point.setPoint(route[i-1]);
+            route[i] = point.getPoint();
+            System.out.println(route[i]);
         }
 
         route = null;
