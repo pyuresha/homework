@@ -30,5 +30,14 @@ public class Random {
         }
         Collections.shuffle(deck);
     }
+    public void Print() {
+        int count = 0;
+        for (int i = 0; i < number_players; i++){
+            for (int j = 0; j < 6; j++) {
+                System.out.println(deck.get(count));
+                count++;
+            }
+        }
+    }
 
 }
