@@ -1,7 +1,5 @@
-package start;
+package Task1;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
