@@ -39,7 +39,6 @@ public class Rock {
         route = new int[route_length];
         Point point = new Point(maxStep,maxDiff);
 
-        System.out.println(route[0]);
         route[0] = point.getPoint();
 
         for (int i = 1; i < route_length; i++) {

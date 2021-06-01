@@ -16,6 +16,10 @@ public class Point {
 
     public void setPoint(int element) {
         max = Math.max(Math.max(max,min),element);
+        //System.out.println("max " + max);
+        min = Math.min(min,element);
+        System.out.println("min" + min);
+        diff = max - min;
 
         int a = negative(min);
         int b = positive(max);
@@ -25,27 +29,29 @@ public class Point {
     public Point(int maxStep, int maxDiff){
         this.maxStep = maxStep;
         this.maxDiff = maxDiff;
-        this.point = (int) (Math.random()*maxStep);
+        point = (int) (Math.random()*maxStep);
 
         this.max = point;
         this.min = point;
+
+        System.out.println(point);
     }
 
 
     private int positive (int max_f) {
-        if (max_f+diff > maxStep) {
+        if (max_f+(maxStep-diff) > maxStep) {
             return maxStep;
         }
         else
-            return max_f+diff;
+            return max_f+(maxStep-diff);
     }
 
     private int negative (int min_f) {
-        if (min_f-diff < 0) {
+        if (min_f-(maxStep-diff) < 0) {
             return 0;
         }
         else
-            return min_f-diff;
+            return min_f-(maxStep-diff);
     }
 
 
