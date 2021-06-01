@@ -33,11 +33,14 @@ public class Random {
     public void Print() {
         int count = 0;
         for (int i = 0; i < number_players; i++){
-            for (int j = 0; j < 6; j++) {
+            System.out.println();
+            System.out.print("!!!Игрок ");
+            System.out.println(i+1);
+            for (int j = 0; j < 5; j++) {
                 System.out.println(deck.get(count));
                 count++;
             }
         }
     }
-
+    
 }
